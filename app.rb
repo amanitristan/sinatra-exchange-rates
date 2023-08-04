@@ -28,7 +28,7 @@ index = 0
 
 =begin -- Transfer code into homepage.erb using the ERB tags
 code.each do |@the_code|
-  pp @the_code
+  pp "Convert 1 @the_code to..."
 end
 =end
 
