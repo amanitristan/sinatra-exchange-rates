@@ -21,21 +21,28 @@ parsed_response = JSON.parse(raw_response)
 symbols = parsed_response.fetch("symbols")
 #pp symbols.keys
 
-code = symbols.keys
+@code = symbols.keys
 index = 0
+
 
 # STEP 3: Print out the the "code" value (which is the same as symbols.keys) for each currency.
 
 =begin -- Transfer code into homepage.erb using the ERB tags
-code.each do |@the_code|
-  pp "Convert 1 @the_code to..."
+@code.each do |the_code|
+  pp "Convert 1 #{the_code} to..."
 end
 =end
 
-# HOMEPAGE ROUTE
+
+# STEP 4: Create a HOMEPAGE ROUTE for the list of possible conversions.
 
 get("/") do
-  require
-
   erb(:homepage)
+end
+
+
+# STEP 5: Create a DYNAMIC ROUTE for all the possible conversions for each currency symbol.
+
+get("/:conversion") do
+  erb(:conversion)
 end
