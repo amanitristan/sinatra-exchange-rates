@@ -4,9 +4,9 @@
 
 
 <ul>
-  @code.each do |@first_code|
+  <% @code.each do |first_symbol| %>
     <li>
-      <a href="/:first_symbol">"Convert 1 #{@first_code} to..."</a>
+      <a href="/<%=first_symbol%>">Convert 1 <%=first_symbol%> to...</a>
     </li>
-  end
+  <% end %>
 </u>

@@ -1,13 +1,13 @@
 <h1>
-  Convert <%= params.fetch("@first_code") %>
+  Convert <%= @first_symbol %>
 </h1>
 
 Go <a href="/">back</a>
 
 <ul>
-   @code.each do |@second_code|
+  <% @code.each do |second_symbol| %>
     <li>
-      <a href="/:first_symbol/:second_symbol">"Convert 1 #{params.fetch("@first_code")} to #{@second_code}"</a>
+      <a href="/<%=@first_symbol%>/<%=second_symbol%>">Convert 1 <%=@first_symbol%> to <%=second_symbol%>...</a>
     </li>
-   end
+  <% end %>
 </u>

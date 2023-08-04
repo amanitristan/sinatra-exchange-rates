@@ -1,5 +1,9 @@
 <h1>
-  Convert <%= params.fetch("@first_code") %> to <%= params.fetch("@second_code") %>
+  Convert <%= @first_symbol %> to <%= @second_symbol %>
 </h1>
 
-Go <a href="/:first_symbol">back</a>
+<p>
+  1 <%=@first_symbol%> equals <%=@rate%> <%=@second_symbol%>.
+</p>
+
+Go <a href="/<%=@first_symbol%>">back</a>
