@@ -19,11 +19,16 @@ parsed_response = JSON.parse(raw_response)
 #pp parsed_response
 
 symbols = parsed_response.fetch("symbols")
-#pp symbols
+#pp symbols.keys
 
-# STEP 3: Parse out the the "code" for each cyrrency symbol
+code = symbols.keys
+index = 0
 
+# STEP 3: Print out the the "code" value (which is the same as symbols.keys) for each currency.
 
+code.each do |@the_code|
+  pp @the_code
+end
 
 
 # HOMEPAGE ROUTE
