@@ -27,11 +27,11 @@ index = 0
 
 # STEP 3: Print out the the "code" value (which is the same as symbols.keys) for each currency.
 
-=begin -- Transfer code into homepage.erb using the ERB tags
+#=begin -- Transfer code into homepage.erb using the ERB tags
 @code.each do |the_code|
   pp "Convert 1 #{the_code} to..."
 end
-=end
+#=end
 
 
 # STEP 4: Create a HOMEPAGE ROUTE for the list of possible conversions.
