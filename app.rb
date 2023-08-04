@@ -43,6 +43,10 @@ end
 
 # STEP 5: Create a DYNAMIC ROUTE for all the possible conversions for each currency symbol.
 
-get("/:conversion") do
-  erb(:conversion)
+get("/:first_symbol") do
+  erb(:convert_x)
+end
+
+get("/:first_symbol/:second_symbol") do
+  erb(:convert_xtox)
 end
